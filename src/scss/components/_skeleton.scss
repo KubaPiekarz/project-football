@@ -1,0 +1,95 @@
+.team-card {
+
+  @include element('header') {
+    @include media-breakpoint-up('md') {
+      gap: 100px;
+    }
+  }
+
+  @include element('skeleton-rank') {
+    background: #e0e0e0;
+    border-radius: 0 50% 50% 0;
+    width: 24px;
+    height: 24px;
+    animation: pulse 1.5s infinite ease-in-out;
+    position: absolute;
+    left: 0;
+  }
+
+  @include element('skeleton-badge') {
+    background: #e0e0e0;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: inline-block;
+  }
+
+  @include element('skeleton-name') {
+    background: #e0e0e0;
+    border-radius: 4px;
+    width: 120px;
+    height: 20px;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: inline-block;
+  }
+
+  @include element('skeleton-score-record') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include element('skeleton-chart') {
+    background: #e0e0e0;
+    border-radius: 4px;
+    width: 224px;
+    height: 12px;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: block;
+
+    @include media-breakpoint-up('md') {
+      width: 100%;
+    }
+  }
+
+  @include element('skeleton-record') {
+    background: #e0e0e0;
+    border-radius: 14px;
+    width: 100%;
+    height: 12px;
+    width: 114px;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: block;
+  }
+
+  @include element('skeleton-points') {
+    background: #e0e0e0;
+    border-radius: 8px;
+    width: 144px;
+    height: 32px;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: inline-block;
+  }
+
+  @include element('skeleton-goal') {
+    background: #e0e0e0;
+    border-radius: 8px;
+    width: 180px;
+    height: 48px;
+    margin: 4px 0;
+    animation: pulse 1.5s infinite ease-in-out;
+    display: block;
+
+    @include media-breakpoint-down('md') {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

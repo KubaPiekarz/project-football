@@ -1,0 +1,41 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue-100;
+    border-radius: 8px;
+    padding: 8px 16px;
+    gap: 8px;
+    font-size: $font-size-small;
+    width: 340px;
+
+    @include element('items') {
+        display: flex;
+        overflow: hidden;
+        gap: 4px;
+       
+     }
+
+     @include element('item') {
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+        font-weight: $font-weight-semibold;
+    }
+    .w {
+        background-color: $green;
+    }
+
+    .d {
+        background-color: $yellow;
+    }
+    .l {
+        background-color: $red;
+    }
+}
+
+
+

@@ -1,0 +1,159 @@
+.team-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 80vw;
+
+  @include media-breakpoint-up('md') {
+    width: auto;
+  }
+
+  @include element('header') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    margin-left: 10px;
+    
+    
+    h3 {
+      width: 100%;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
+    }
+
+    @include media-breakpoint-up('md') {
+      flex-direction: row;
+    }
+  }
+
+  @include element('info') {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    align-self: baseline;
+
+    @include media-breakpoint-up('md') {
+      margin-left: 30px;
+      align-self: center;
+    }
+  }
+
+  @include element('rank') {
+    background-color: $blue-600;
+    position: absolute;
+    left: 0;
+    color: white;
+    border-radius: 0 50% 50% 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include element('badge') {
+    width: 32px;
+    height: 32px;
+  }
+
+  @include element('name') {
+    font-weight: $font-weight-semibold;
+  }
+
+  @include element('score-record') {
+    display: flex;
+    align-items: end;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-self: end;
+
+    @include media-breakpoint-up('md') {
+      flex-direction: row;
+      gap: 1.5rem;
+      flex: 0 0 50%;
+      align-items: center;
+    }
+
+    @include media-breakpoint-only('md') {
+      flex-direction: column-reverse;
+      align-items: end;
+    }
+  }
+
+  @include element('record-chart') {
+    @include media-breakpoint-up('md') {
+      display: flex;
+    }
+    width: 100%;
+  }
+
+  @include element('points') {
+    background-color: $blue-600;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    font-weight: $font-weight-semibold;
+    width: 144px;
+    flex: 0 0 auto;
+  }
+
+  @include element('record') {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+
+    @include media-breakpoint-up('md') {
+      justify-content: start;
+    }
+
+    span {
+      margin-left: 0.5rem;
+      color: #333;
+    }
+  }
+
+  @include element('stats') {
+    display: flex;
+    gap: 8px;
+    margin-left: 16px;
+    overflow: auto;
+
+    @include media-breakpoint-up('md') {
+      justify-content: space-between;
+      overflow: visible;
+    }
+  }
+
+  @include element('goals') {
+    display: flex;
+    gap: 8px;
+    font-size: $font-size-small;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      h4 {
+        margin: 0;
+        font-size: $font-size-lg;
+      }
+    }
+  }
+
+  @include element('goal') {
+    flex-direction: column;
+    background-color: $blue-100;
+    border-radius: $border-radius-small;
+    padding: $spacer * 1 0;
+    width: 180px;
+
+    h4 {
+      color: $blue-600;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.form-chart {
+  display: flex;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-top: 8px; 
+  width: 217px;
+
+  @include media-breakpoint-up('md') {
+    width: 100%;
+  }
+}
+
+
+.form-chart__item.w {
+  background: $green;
+}
+
+.form-chart__item.d {
+  background: $yellow;
+}
+
+.form-chart__item.l {
+  background: $red;
+}
